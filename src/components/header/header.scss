@@ -1,0 +1,116 @@
+@import "../../index.scss";
+
+.header {
+  background-color: #f1eadc;
+
+  &_container {
+    @extend .container;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_title {
+    display: flex;
+    align-items: center;
+
+    &_logo img {
+      height: 70px;
+    }
+    &_name {
+      font-size: 30px;
+      font-weight: bold;
+      color: #b94028;
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+  }
+  &_btns {
+    display: flex;
+    align-items: center;
+  }
+  &_btn {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  &_btn svg {
+    color: #b94028;
+    height: 30px;
+    width: 30px;
+    margin-right: 7px;
+  }
+  &_btn span {
+    color: #b94028;
+    opacity: 60%;
+    text-decoration: underline;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  &_sign {
+    display: flex;
+    align-items: center;
+
+    &_text {
+      color: #b94028;
+      opacity: 80%;
+      font-size: 15px;
+    }
+    &_in {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #b63820;
+      border-radius: 10px;
+      padding: 7px 15px 7px 15px;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+    &_in span {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  /* 1200 */
+  .header_title_name {
+    font-size: 25px;
+  }
+}
+@media (max-width: 1200px) {
+  /* 992 */
+  .header_title_name {
+    font-size: 20px;
+  }
+  .header_btn {
+    display: none;
+  }
+  .header_sign {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header_title_logo img {
+    height: 50px;
+  }
+  .header_title_name {
+    font-size: 15px;
+  }
+  .header_container {
+    height: 70px;
+  }
+}
+@media (max-width: 480px) {
+  .header_title_name {
+    font-size: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .header_title_name {
+    font-size: 15px;
+  }
+}
