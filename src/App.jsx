@@ -7,12 +7,16 @@ import Footer from "./components/footer/footer";
 
 // pages
 import Home from "./pages/home/home";
+import Entrance from "./pages/entrance/entrance";
+import Registration from "./pages/registration/registration";
 
 function App() {
   return (
     <>
       <Header />
-      <Home />
+      {/* <Home /> */}
+      {/* <Entrance /> */}
+      <Registration />
       <Footer />
     </>
   );

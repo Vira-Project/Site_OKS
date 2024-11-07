@@ -8,6 +8,9 @@ import { MdOutlinePersonOutline } from "react-icons/md";
 import { IoBookOutline } from "react-icons/io5";
 import { HiOutlinePhoto } from "react-icons/hi2";
 
+// png
+import logop from "../../icons/logop.png";
+
 function Header() {
   return (
     <>
@@ -15,7 +18,7 @@ function Header() {
         <div className="header_container">
           <div className="header_title">
             <div className="header_title_logo">
-              <img src="src\icons\logop.png" alt="logo" />
+              <img src={logop} alt="logo" />
             </div>
             <div className="header_title_name">
               <span>Оксана КОВАЛЬЧУК</span>

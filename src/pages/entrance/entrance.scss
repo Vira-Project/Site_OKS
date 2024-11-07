@@ -1,0 +1,167 @@
+@import "../../index.scss";
+
+.entrance {
+  height: calc(100vh - 200px);
+
+  &_container {
+    @extend .container;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &_block {
+    background-color: #efe4cf;
+    height: 410px;
+    width: 700px;
+    border-radius: 20px;
+    position: relative;
+
+    &_container {
+      @extend .container;
+      max-width: 700px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    &_registration {
+      color: #b94028;
+      opacity: 80%;
+      font-size: 15px;
+      height: 15px;
+      text-decoration: underline;
+    }
+    &_star_top {
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &_star_bottom {
+      height: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+    &_input {
+      height: 80px;
+      width: 100%;
+      margin-top: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & input {
+        background-color: #f6f4ee;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 20px;
+        padding-left: 20px;
+        color: $text_color;
+        border: none;
+      }
+    }
+    &_button {
+      background-color: #b63820;
+      height: 50px;
+      width: 100%;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px - 15px;
+
+      & span {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .entrance_block {
+    width: 600px;
+
+    &_container {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .entrance_block {
+    width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .entrance_block {
+    width: 400px;
+    height: 330px;
+
+    &_container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    &_input {
+      height: 70px;
+      margin-top: 35px;
+
+      & input {
+        font-size: 15px;
+        padding-left: 15px;
+      }
+    }
+    &_button {
+      // height: 40px;
+      margin-top: 20px;
+
+      & span {
+        font-size: 15px;
+      }
+    }
+    &_registration {
+      font-size: 13px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .entrance_block {
+    width: 270px;
+    height: 300px;
+
+    &_container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &_input {
+      height: 50px;
+      margin-top: 35px;
+
+      & input {
+        font-size: 15px;
+        padding-left: 15px;
+      }
+    }
+    &_button {
+      height: 40px;
+
+      & span {
+        font-size: 15px;
+      }
+    }
+    &_registration {
+      font-size: 12px;
+    }
+  }
+}
+@media (orientation: portrait) {
+}
