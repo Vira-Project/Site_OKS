@@ -1,7 +1,7 @@
 import "./home.scss";
 
 // svg
-import start_svg from "../../icons/star.svg";
+import star_svg from "../../icons/star.svg";
 
 // png
 import photo_vik from "../../icons/photo_vik.jpg";
@@ -15,7 +15,7 @@ function Home() {
             <img src={photo_vik} alt="photo" />
           </div>
           <div className="home_information">
-            <img src={start_svg} alt="star" />
+            <img src={star_svg} alt="star" />
             <div className="home_information_text">
               <div>
                 <span>Посада: </span>викладач інформатики
@@ -28,7 +28,7 @@ function Home() {
                 <span>Стаж: </span>8 років
               </div>
             </div>
-            <img src={start_svg} alt="star" />
+            <img src={star_svg} alt="star" />
           </div>
         </div>
       </div>
