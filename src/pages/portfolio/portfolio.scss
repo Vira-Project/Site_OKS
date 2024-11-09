@@ -1,22 +1,22 @@
 @import "../../index.scss";
 
 .portfolio {
-  // height: calc(100vh - 200px);
-  height: 100vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   &_container {
     @extend .container;
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
   }
   &_short {
     height: 100%;
-    width: 70%;
     display: flex;
+    flex: 0 0 450px;
     justify-content: center;
     align-items: center;
+    max-width: 450px;
 
     &_block {
       background-color: #efe4cf;
@@ -24,7 +24,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 450px;
+      width: 100%;
       height: 850px;
       position: relative;
 
@@ -96,17 +96,16 @@
     }
   }
   &_information {
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-left: 60px;
+    flex: 1;
 
     &_block {
       display: flex;
-      width: 800px;
-      height: 850px;
 
       &_text {
         display: flex;
@@ -128,15 +127,110 @@
   }
 }
 
+.portfolio_information {
+  .portfolio_short_block_text_item {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 1300px) {
+  .portfolio_information {
+    .portfolio_short_block_text_item {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
+  .portfolio {
+    &_container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &_short {
+      margin-bottom: 30px;
+
+      &_block {
+        width: 200%;
+
+        &_container {
+          width: 85%;
+        }
+        &_text_item {
+          font-size: 18px;
+
+          &_text_medias {
+            width: 30%;
+
+            & svg {
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+    &_information {
+      padding-left: 20px;
+    }
+  }
 }
-@media (max-width: 1000px) {
-}
-@media (max-width: 850px) {
+@media (max-width: 680px) {
+  .portfolio {
+    &_short {
+      &_block {
+        width: 100%;
+        &_container {
+          width: 85%;
+        }
+        &_text_item {
+          font-size: 18px;
+
+          &_text_medias {
+            width: 30%;
+
+            & svg {
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 480px) {
+  .portfolio {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &_short {
+      max-width: 280px;
+      flex: 0 0 280px;
+
+      &_block {
+        &_star_top {
+          height: 15px;
+        }
+        &_star_bottom {
+          height: 15px;
+        }
+        &_text_item {
+          font-size: 16px;
+
+          &_text_medias {
+            & svg {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+    &_information {
+      padding-left: 0px;
+    }
+  }
+  .portfolio_information .portfolio_short_block_text_item {
+    font-size: 16px;
+  }
 }
 @media (orientation: portrait) {
 }

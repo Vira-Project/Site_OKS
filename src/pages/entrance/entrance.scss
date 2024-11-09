@@ -1,7 +1,11 @@
 @import "../../index.scss";
 
 .entrance {
-  height: calc(100vh - 200px);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   &_container {
     @extend .container;

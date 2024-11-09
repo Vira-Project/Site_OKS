@@ -19,17 +19,17 @@ function Registration() {
                 <input
                   type="email"
                   placeholder="...@example.com"
-                  maxlength="64"
+                  maxLength="64"
                 />
               </div>
               <div className="registration_block_input">
-                <input type="email" placeholder="...password" maxlength="64" />
+                <input type="email" placeholder="...password" maxLength="64" />
               </div>
               <div className="registration_block_input">
                 <input
                   type="email"
                   placeholder="...repeat password"
-                  maxlength="64"
+                  maxLength="64"
                 />
               </div>
               <span className="registration_block_entrance btn">Вхід</span>

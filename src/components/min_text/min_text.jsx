@@ -5,9 +5,7 @@ function MinText({ style, h, text }) {
         <div className="portfolio_short_block_text_item_header">
           <span>{h}</span>
         </div>
-        <div className="portfolio_short_block_text_item_text">
-          <span>{text}</span>
-        </div>
+        <div className="portfolio_short_block_text_item_text">{text}</div>
       </div>
     </>
   );
