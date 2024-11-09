@@ -14,9 +14,9 @@
     height: 100%;
     display: flex;
     flex: 0 0 450px;
+    max-width: 450px;
     justify-content: center;
     align-items: center;
-    max-width: 450px;
 
     &_block {
       background-color: #efe4cf;
@@ -149,9 +149,11 @@
     }
     &_short {
       margin-bottom: 30px;
+      flex: 0 0 100%;
+      max-width: 100%;
 
       &_block {
-        width: 200%;
+        // width: 200%;
 
         &_container {
           width: 85%;
@@ -178,7 +180,7 @@
   .portfolio {
     &_short {
       &_block {
-        width: 100%;
+        // width: 100%;
         &_container {
           width: 85%;
         }
@@ -203,8 +205,8 @@
     padding-bottom: 30px;
 
     &_short {
-      max-width: 280px;
-      flex: 0 0 280px;
+      // max-width: 280px;
+      // flex: 0 0 280px;
 
       &_block {
         &_star_top {

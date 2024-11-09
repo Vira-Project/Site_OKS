@@ -1,4 +1,6 @@
 import "./header.scss";
+import { NavLink, Link } from "react-router-dom";
+import { ROUTES } from "../../config/routes";
 
 import HeaderBtn from "./header_btns/header_btn";
 
@@ -25,16 +27,30 @@ function Header() {
             </div>
           </div>
           <div className="header_btns">
-            <HeaderBtn text={"Головна"} icon={<PiHouse />} />
-            <HeaderBtn text={"Портфоліо"} icon={<MdOutlinePersonOutline />} />
-            <HeaderBtn text={"Освітні компоненти"} icon={<IoBookOutline />} />
-            <HeaderBtn text={"Світлина"} icon={<HiOutlinePhoto />} />
+            <NavLink to={ROUTES.home}>
+              <HeaderBtn text={"Головна"} icon={<PiHouse />} />
+            </NavLink>
+            <NavLink to={ROUTES.portfolio}>
+              <HeaderBtn text={"Портфоліо"} icon={<MdOutlinePersonOutline />} />
+            </NavLink>
+            {/* TODO додай сторінку */}
+            <NavLink to={ROUTES.portfolio}>
+              <HeaderBtn text={"Освітні компоненти"} icon={<IoBookOutline />} />
+            </NavLink>
+            {/* TODO додай сторінку */}
+            <NavLink to={ROUTES.portfolio}>
+              <HeaderBtn text={"Світлина"} icon={<HiOutlinePhoto />} />
+            </NavLink>
           </div>
           <div className="header_sign">
-            <span className="header_sign_text">Реєстрація</span>
-            <div className="header_sign_in btn">
-              <span>Вхід</span>
-            </div>
+            <Link to={ROUTES.register}>
+              <span className="header_sign_text btn">Реєстрація</span>
+            </Link>
+            <Link to={ROUTES.login}>
+              <div className="header_sign_in btn">
+                <span>Вхід</span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

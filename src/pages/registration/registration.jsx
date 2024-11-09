@@ -1,3 +1,5 @@
+import { ROUTES } from "../../config/routes";
+import { NavLink } from "react-router-dom";
 import "./registration.scss";
 
 // svg
@@ -32,7 +34,9 @@ function Registration() {
                   maxLength="64"
                 />
               </div>
-              <span className="registration_block_entrance btn">Вхід</span>
+              <NavLink to={ROUTES.login}>
+                <span className="registration_block_entrance btn">Вхід</span>
+              </NavLink>
               <div className="registration_block_button btn">
                 <span>Зареєструватися</span>
               </div>

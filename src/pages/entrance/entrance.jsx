@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
 import "./entrance.scss";
 
 // svg
 import star_svg from "../../icons/star.svg";
+import { ROUTES } from "../../config/routes";
 
 function Entrance() {
   return (
@@ -25,9 +27,11 @@ function Entrance() {
               <div className="entrance_block_input">
                 <input type="email" placeholder="...password" maxLength="64" />
               </div>
-              <span className="entrance_block_registration btn">
-                Реєстрація
-              </span>
+              <NavLink to={ROUTES.register}>
+                <span className="entrance_block_registration btn">
+                  Реєстрація
+                </span>
+              </NavLink>
               <div className="entrance_block_button btn">
                 <span>Вхід</span>
               </div>
