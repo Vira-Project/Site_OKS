@@ -1,0 +1,74 @@
+@import "../../../index.scss";
+
+.header_menu {
+  display: none;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.97);
+  position: fixed;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 80px 40px;
+  transform: translateX(120%);
+  transition: transform 0.5s ease;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &_img {
+    display: none;
+    width: 40px;
+    height: 40px;
+    color: #b94028;
+  }
+  &_btn {
+    white-space: nowrap;
+    width: fit-content;
+
+    & a {
+      display: flex;
+      align-items: center;
+
+      & svg {
+        height: 30px;
+        width: 30px;
+        margin-right: 7px;
+        color: #b94028;
+      }
+      & span {
+        font-size: 17px;
+        color: $text_color;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header_menu {
+    display: flex;
+    &_img {
+      display: flex;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header_menu {
+    width: 100%;
+    top: 70px;
+
+    &_img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media (max-width: 500px) {
+}
+@media (max-width: 320px) {
+}
+@media (orientation: portrait) {
+}

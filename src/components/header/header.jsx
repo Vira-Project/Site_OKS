@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { ROUTES } from "../../config/routes";
 
 import HeaderBtn from "./header_btns/header_btn";
+import HeaderMenu from "./header_menu/header_menu";
 
 // svg
 import { PiHouse } from "react-icons/pi";
@@ -27,6 +28,7 @@ function Header() {
             </div>
           </div>
           <div className="header_btns">
+            <HeaderMenu />
             <NavLink to={ROUTES.home}>
               <HeaderBtn text={"Головна"} icon={<PiHouse />} />
             </NavLink>
