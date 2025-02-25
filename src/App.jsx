@@ -7,6 +7,8 @@ import { ROUTES } from "./config/routes";
 import Home from "./pages/home/home";
 import Portfolio from "./pages/portfolio/portfolio";
 import Entrance from "./pages/entrance/entrance";
+import Education from "./pages/educational/Education";
+import Photos from "./pages/photos/photos";
 import Registration from "./pages/registration/registration";
 import Error from "./pages/error/error";
 
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: ROUTES.login,
         element: <Entrance />,
+      },
+      {
+        path: ROUTES.education,
+        element: <Education />,
+      },
+      {
+        path: ROUTES.photos,
+        element: <Photos />,
       },
       {
         path: ROUTES.register,
