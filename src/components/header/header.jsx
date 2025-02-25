@@ -35,12 +35,10 @@ function Header() {
             <NavLink to={ROUTES.portfolio}>
               <HeaderBtn text={"Портфоліо"} icon={<MdOutlinePersonOutline />} />
             </NavLink>
-            {/* TODO додай сторінку */}
-            <NavLink to={ROUTES.portfolio}>
+            <NavLink to={ROUTES.education}>
               <HeaderBtn text={"Освітні компоненти"} icon={<IoBookOutline />} />
             </NavLink>
-            {/* TODO додай сторінку */}
-            <NavLink to={ROUTES.portfolio}>
+            <NavLink to={ROUTES.photos}>
               <HeaderBtn text={"Світлина"} icon={<HiOutlinePhoto />} />
             </NavLink>
           </div>
