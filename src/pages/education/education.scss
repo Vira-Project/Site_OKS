@@ -1,0 +1,118 @@
+@import "../../index.scss";
+
+.education {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &_container {
+    @extend .container;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &_block {
+    background-color: #efe4cf;
+    border-radius: 20px;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 20px 40px 20px 40px;
+
+    &_container {
+      @extend .container;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+}
+
+.education_item {
+  display: flex;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 2px #f6f0e4 solid;
+  color: #b94028;
+
+  svg {
+    width: 60px;
+    height: 60px;
+    color: #b63820;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 10px;
+  }
+
+  &_cover {
+    width: 15%;
+    border-right: 2px #f6f0e4 solid;
+  }
+  &_title {
+    width: 30%;
+    border-right: 2px #f6f0e4 solid;
+  }
+  &_description {
+    width: 40%;
+    border-right: 2px #f6f0e4 solid;
+
+    p {
+      width: 100%;
+    }
+  }
+  &_url {
+    width: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .education_item {
+    font-size: 15px;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .education_item {
+    height: 200px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    div {
+      padding-right: 10px;
+    }
+
+    &_description {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .education_item {
+    font-size: 13px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

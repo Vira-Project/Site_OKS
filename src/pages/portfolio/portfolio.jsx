@@ -30,7 +30,17 @@ function Portfolio() {
                 </div>
                 <div className="portfolio_short_block_text">
                   <MinText h={"КОВАЛЬЧУК ОКСАНА ДМИТРІВНА"} text={"викладач"} />
-                  <MinText h={"ОСВІТНІ КОМПОНЕНТИ"} text={"Інформатика"} />
+                  <MinText
+                    h={"ОСВІТНІ КОМПОНЕНТИ"}
+                    text={
+                      <span>
+                        <p>Інформатика</p>
+                        <p>Web-технології</p>
+                        <p>Алгоритми</p>
+                        <p>Операційні системи</p>
+                      </span>
+                    }
+                  />
                   <MinText h={"КОНТАКТНА ІНФОРМАЦІЯ"} text={"+3806839288"} />
                   <MinText
                     h={"СОЦІАЛЬНІ МЕРЕЖІ"}
