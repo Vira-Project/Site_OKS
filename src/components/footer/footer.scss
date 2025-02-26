@@ -3,6 +3,7 @@
 .footer {
   margin-top: auto;
   background-color: #f1eadc;
+  max-height: 100px;
 
   &_container {
     @extend .container;
