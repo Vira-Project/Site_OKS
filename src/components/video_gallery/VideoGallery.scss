@@ -1,0 +1,78 @@
+/* Сітка відео-галереї */
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.video-item {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+/* Повноекранний перегляд відео */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.video-container {
+  width: 80%;
+  max-width: 800px;
+
+  iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 900px) {
+  .video-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .video-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
