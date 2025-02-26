@@ -15,7 +15,7 @@ import Registration from "./pages/registration/registration";
 import Error from "./pages/error/error";
 
 function App() {
-  const [accountStatus, setAccountStatus] = useState(false);
+  const [accountStatus, setAccountStatus] = useState(true); // TODO: must be false
 
   const router = createBrowserRouter([
     {
