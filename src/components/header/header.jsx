@@ -14,7 +14,7 @@ import { HiOutlinePhoto } from "react-icons/hi2";
 // png
 import logop from "../../icons/logop.png";
 
-function Header() {
+function Header({ accountStatus }) {
   return (
     <>
       <div className="header">
@@ -35,9 +35,21 @@ function Header() {
             <NavLink to={ROUTES.portfolio}>
               <HeaderBtn text={"Портфоліо"} icon={<MdOutlinePersonOutline />} />
             </NavLink>
-            <NavLink to={ROUTES.education}>
-              <HeaderBtn text={"Освітні компоненти"} icon={<IoBookOutline />} />
-            </NavLink>
+            {accountStatus ? (
+              <NavLink to={ROUTES.education}>
+                <HeaderBtn
+                  text={"Освітні компоненти"}
+                  icon={<IoBookOutline />}
+                />
+              </NavLink>
+            ) : (
+              <NavLink to={ROUTES.login}>
+                <HeaderBtn
+                  text={"Освітні компоненти"}
+                  icon={<IoBookOutline />}
+                />
+              </NavLink>
+            )}
             <NavLink to={ROUTES.photos}>
               <HeaderBtn text={"Світлина"} icon={<HiOutlinePhoto />} />
             </NavLink>

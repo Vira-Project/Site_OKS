@@ -1,11 +1,36 @@
+import { useEffect, useState } from "react";
+import { ROUTES } from "../../config/routes";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 import "./entrance.scss";
 
 // svg
 import star_svg from "../../icons/star.svg";
-import { ROUTES } from "../../config/routes";
 
-function Entrance() {
+function Entrance({ setAccountStatus }) {
+  const [emailValue, setEmail] = useState("");
+  const [passwordValue, setPassword] = useState("");
+
+  const [accSt, setAccSt] = useState("Вхід");
+
+  const sendData = async () => {
+    try {
+      const data = { email: emailValue, password: passwordValue };
+      const response = await axios.post(
+        "http://localhost:8080/api/login",
+        data
+      );
+      console.log("Відповідь сервера:", response.data);
+      setAccountStatus(response.data["status"]);
+
+      if (response.data["status"]) {
+        setAccSt("Авторизовано");
+      }
+    } catch (error) {
+      console.error("Помилка при відправці даних:", error);
+    }
+  };
+
   return (
     <>
       <div className="entrance">
@@ -22,18 +47,23 @@ function Entrance() {
                   type="email"
                   placeholder="...@example.com"
                   maxLength="64"
+                  onChange={(v) => setEmail(v.target.value)}
                 />
               </div>
               <div className="entrance_block_input">
-                <input type="email" placeholder="...password" maxLength="64" />
+                <input
+                  placeholder="...password"
+                  maxLength="64"
+                  onChange={(v) => setPassword(v.target.value)}
+                />
               </div>
               <NavLink to={ROUTES.register}>
                 <span className="entrance_block_registration btn">
                   Реєстрація
                 </span>
               </NavLink>
-              <div className="entrance_block_button btn">
-                <span>Вхід</span>
+              <div className="entrance_block_button btn" onClick={sendData}>
+                <span>{accSt}</span>
               </div>
             </div>
             <img
