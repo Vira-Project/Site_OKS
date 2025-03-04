@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./photos.scss";
 
 // COMPONENTS
@@ -6,29 +8,24 @@ import ImageSlider from "../../components/image_slider/ImageSlider";
 import Gallery from "../../components/image_gallery/Gallery";
 import VideoGallery from "../../components/video_gallery/VideoGallery";
 
-const images = [
-  "https://www.kpl.volyn.ua/images/fotos/4/title.jpg",
-  "https://www.kpl.volyn.ua/images/fotos/5/title.jpg",
-  "https://www.kpl.volyn.ua/images/fotos/6/title.jpg",
-  "https://www.kpl.volyn.ua/images/fotos/7/title.jpg",
-  "https://www.kpl.volyn.ua/images/fotos/4/title.jpg",
-  "https://www.kpl.volyn.ua/images/fotos/5/title.jpg",
-  "https://www.kpl.volyn.ua/images/fotos/6/title.jpg",
-  "https://www.kpl.volyn.ua/images/fotos/7/title.jpg",
-];
-
-const videoIds = [
-  "dDU7FDjXFSA",
-  "0rsr-SeS6qQ",
-  "4_OZt7D36H4",
-  "0zjzX1BbaDE",
-  "8PPj8-rW614",
-  "4_OZt7D36H4",
-  "0zjzX1BbaDE",
-  "8PPj8-rW614",
-];
-
 function Photos() {
+  const [images, setImages] = useState([]);
+  const [slider, setSlider] = useState([]);
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    const fetchAPI = async () => {
+      const respone = await axios.get("http://localhost:8080/api/get_photos");
+      console.log(respone.data);
+
+      setImages(respone.data.images);
+      setSlider(respone.data.slider);
+      setVideos(respone.data.videos);
+    };
+
+    fetchAPI();
+  }, []);
+
   return (
     <div className="photos">
       <div className="photos_container">
@@ -38,11 +35,11 @@ function Photos() {
         />
         <PhotosItem
           title={"Відкритий урок"}
-          covers={<Gallery images={images} />}
+          covers={<Gallery images={slider} />}
         />
         <PhotosItem
           title={"Урочисте зібрання"}
-          covers={<VideoGallery videos={videoIds} />}
+          covers={<VideoGallery videos={videos} />}
         />
       </div>
     </div>
